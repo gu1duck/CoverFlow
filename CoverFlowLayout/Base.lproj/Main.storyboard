@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XxJ-NB-XOZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Cover Flow Collection View Controller-->
+        <scene sceneID="7Jx-6b-eMb">
+            <objects>
+                <collectionViewController id="XxJ-NB-XOZ" customClass="CoverFlowCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Rgp-DQ-UwF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pqs-ds-Pt5" customClass="CoverFlowLayout">
+                            <size key="itemSize" width="146" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="coverFlowCell" id="v86-9b-cIB" customClass="CoverFlowCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="146" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Weezer" translatesAutoresizingMaskIntoConstraints="NO" id="CbT-rx-fnH">
+                                            <rect key="frame" x="0.0" y="0.0" width="146" height="150"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CbT-rx-fnH" secondAttribute="bottom" id="EHe-0D-XGS"/>
+                                    <constraint firstAttribute="trailing" secondItem="CbT-rx-fnH" secondAttribute="trailing" id="Z7e-Y1-1oz"/>
+                                    <constraint firstItem="CbT-rx-fnH" firstAttribute="top" secondItem="v86-9b-cIB" secondAttribute="top" id="ggD-Cj-UP0"/>
+                                    <constraint firstItem="CbT-rx-fnH" firstAttribute="leading" secondItem="v86-9b-cIB" secondAttribute="leading" id="soB-bz-OM4"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="XxJ-NB-XOZ" id="AAV-gA-a7X"/>
+                            <outlet property="delegate" destination="XxJ-NB-XOZ" id="BkE-Jf-xKf"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFd-g2-hHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257" y="462"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Weezer" width="150" height="150"/>
+    </resources>
+</document>
